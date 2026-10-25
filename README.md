@@ -194,6 +194,83 @@ Rtop = Rbottom · (Vin − Vout) / Vout
 **Example:** Measured 2.998 V vs 3 V → −0.07%.
 
 
+## Practice questions
+
+Same concepts and formulas as the Brightspace quiz, with new numbers (not the real quiz questions). Try each one before opening the answer.
+
+**Q1.** Find the series and parallel resistance of 150 Ω and 330 Ω.
+
+<details><summary>Show answer</summary>
+
+**480 Ω and 103 Ω**. Series: 150 + 330 = 480 Ω. Parallel: 150 × 330 / 480 = 103.1 Ω (smaller than 150 Ω, as it must be).
+
+</details>
+
+**Q2.** Find the equivalent of 1 kΩ, 2.2 kΩ and 4.7 kΩ all in parallel.
+
+<details><summary>Show answer</summary>
+
+**≈ 600 Ω**. 1/R = 1/1000 + 1/2200 + 1/4700 = 0.001 + 0.000455 + 0.000213 = 0.001667 S → R = 600 Ω.
+
+</details>
+
+**Q3.** A 5 V and a 2 V source are in series but opposing (+ to +) across a 1 kΩ resistor. Find the resistor voltage and current.
+
+<details><summary>Show answer</summary>
+
+**3 V, 3 mA**. Opposing sources subtract: 5 − 2 = 3 V. I = 3 V / 1 kΩ = 3 mA.
+
+</details>
+
+**Q4.** A 9 V source drives R1 and R2 in series. R1 drops 4.2 V. What is across R2? What does the DMM show if HI is on the bottom of R2 and LO on the top?
+
+<details><summary>Show answer</summary>
+
+**4.8 V, then −4.8 V**. KVL: 9 − 4.2 − VR2 = 0 → VR2 = 4.8 V. Swapping HI/LO flips the sign: −4.8 V.
+
+</details>
+
+**Q5.** A 12 V supply drives a 330 Ω ±5% resistor. What current range should you expect?
+
+<details><summary>Show answer</summary>
+
+**34.6 mA to 38.3 mA**. R ranges 313.5–346.5 Ω. Imin = 12/346.5 = 34.6 mA, Imax = 12/313.5 = 38.3 mA.
+
+</details>
+
+**Q6.** A divider has Rtop = 6.8 kΩ and Rbottom = 3.3 kΩ on 9 V. Find Vout.
+
+<details><summary>Show answer</summary>
+
+**2.94 V**. Vout = 9 × 3.3/(6.8 + 3.3) = 9 × 0.3267 = 2.94 V.
+
+</details>
+
+**Q7.** Design a divider from 12 V to 5 V with Rbottom = 10 kΩ. What Rtop, and which standard value would you use?
+
+<details><summary>Show answer</summary>
+
+**14 kΩ exact; 15 kΩ → 4.80 V or 13 kΩ → 5.22 V**. Rtop = Rb(Vin − Vout)/Vout = 10k × 7/5 = 14 kΩ. Not an E24 value, so pick 15 kΩ or 13 kΩ, or put two resistors in series (e.g. 12k + 2k).
+
+</details>
+
+**Q8.** The 2-wire reading of a small resistor is 2.236 Ω and the 4-wire reading is 2.118 Ω. What is the resistance of one test lead?
+
+<details><summary>Show answer</summary>
+
+**0.059 Ω**. Two leads = 2.236 − 2.118 = 0.118 Ω, so one lead = 0.059 Ω.
+
+</details>
+
+**Q9.** Two 1 MΩ resistors in series on 10 V. A DMM with 10 MΩ input is put across the bottom one. What does it read?
+
+<details><summary>Show answer</summary>
+
+**4.76 V (not 5 V)**. Bottom becomes 1M ∥ 10M = 0.909 MΩ. V = 10 × 0.909/(1 + 0.909) = 4.76 V. The error is smaller than with 10 MΩ resistors because 1 MΩ ≪ 10 MΩ.
+
+</details>
+
+
 ## Report guide
 
 1. KVL for Figure 4: +1 + 2 − V_out = 0 → V_out = 3 V.
