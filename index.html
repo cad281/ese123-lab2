@@ -408,6 +408,10 @@ function dotLayer(svg,specs){const g=document.createElementNS(NS,'g');svg.append
     for(let i=0;i<n;i++){const c=document.createElementNS(NS,'circle');c.setAttribute('r','2.6');c.setAttribute('fill',s.color||'var(--accent)');g.appendChild(c);ds.push({c,p,L,s:i*L/n,spec:s})}}
   return t=>{for(const d of ds){const sp=d.spec.speed();const pos=((d.s+(reduce?0:t)*sp)%d.L+d.L)%d.L;const pt=d.p.getPointAtLength(pos);d.c.setAttribute('cx',pt.x);d.c.setAttribute('cy',pt.y);d.c.setAttribute('opacity',sp===0?0:0.9)}}}
 
+// resistor & part drawings (BAND index 10 = gold)
+const BAND=['#111','#7a4a1e','#d32f2f','#f57c00','#fdd835','#2e7d32','#1e63d6','#7b3fb5','#8a8a8a','#f4f4f4','#c9a227'];
+const resSVG=b=>`<svg viewBox="0 0 160 40"><line x1="0" y1="20" x2="160" y2="20" stroke="#9aa3ad" stroke-width="3"/><rect x="38" y="8" width="84" height="24" rx="10" fill="${b.length>4?'#9cc3e6':'#d8c49a'}"/>${b.map((c,i)=>`<rect x="${(i===b.length-1?100:50)+(i===b.length-1?6:i*13)}" y="8" width="7" height="24" fill="${BAND[c]}"/>`).join('')}</svg>`;
+
 /* 1. inputs */
 const IN={m:'v'};
 function inDraw(){const svg=$('#inSvg');const m=IN.m;let s='';
